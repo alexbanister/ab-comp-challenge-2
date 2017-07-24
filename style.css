@@ -1,0 +1,364 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 1.5em;
+  font-family: sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: .25em 2em 1.2em 1.5em;
+  background-color: #2b2b2b;
+  border-bottom: 3px solid #27b5fe;
+}
+
+nav {
+  display: flex;
+  align-items: flex-end;
+  color: #747474;
+}
+
+nav span {
+  margin-right: 1.5em;
+  font-size: .8em;
+  text-transform: uppercase;
+}
+
+nav img {
+  width: 1em;
+}
+
+main {
+  padding: 0 1em;
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-rows: repeat(2, 50%);
+}
+
+h1 {
+  color: #4c4c4c;
+  margin: 1em .25em;
+  padding: 0;
+  font-size: 1.5em;
+  font-weight: 300;
+  width: 100%;
+  grid-column: 1 / 5;
+  grid-row: 1 / 2;
+}
+
+h3, h6 {
+  font-size: .8em;
+  color: #2b2b2b;
+  font-weight: normal;
+}
+
+h4 {
+  font-size: .6em;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: 100;
+}
+
+h5 {
+  font-size: 1.5em;
+  color: #ffffff;
+  font-weight: 100;
+}
+
+p {
+  font-size: .5em;
+  color: #747474;
+}
+article {
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+  border-radius: .3em;
+  margin: .35em;
+}
+
+polyline {
+  transition: all 250ms ease-in-out;
+}
+
+.current-user {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  text-align: right;
+  margin-bottom: 1em;
+  font-size: .65em;
+  color: #27b5fe;
+}
+
+.current-user img {
+  width: 2em;
+  margin: .5em;
+}
+
+.active {
+  color: #ffffff;
+}
+
+.logo {
+  margin-bottom: -2.2em;
+  text-align: right;
+}
+
+.logo img {
+  width: 10em;
+}
+
+.card-grey-out {
+  width: 100%;
+  height: 6em;
+  background-color: rgba(0, 0, 0, .3);
+  padding: .75em;
+  display: flex;
+  justify-content: space-between;
+  transition: all 250ms ease-in-out;
+}
+
+/*CARD 1*/
+.card1 {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+.card1:hover .card-grey-out, .card1:focus .card-grey-out {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.card1 .card-top {
+  background-image: url('images/1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card1:hover polyline, .card1:focus polyline {
+  stroke-width: 15;
+}
+
+.card1:hover .card-bottom {
+  background: #ffffff;
+}
+
+/*CARD 2*/
+.card2 {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+.card2:hover .card-grey-out, .card2:focus .card-grey-out {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.card2 .card-top {
+  background-image: url('images/3.jpg');
+  background-size: cover;
+}
+
+.card2:hover polyline, .card2:focus polyline {
+  stroke-width: 15;
+}
+
+.card2:hover .card-bottom {
+  background: #ffffff;
+}
+
+/*CARD 3*/
+.card3 {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+}
+.card3:hover .card-grey-out, .card3:focus .card-grey-out {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.card3 .card-top {
+  background-image: url('images/4.jpg');
+  background-position: -2em 0;
+  background-size: cover;
+}
+
+.card3:hover polyline, .card3:focus polyline {
+  stroke-width: 15;
+}
+
+.card3:hover .card-bottom {
+  background: #ffffff;
+}
+
+/*CARD 4*/
+.card4 {
+  grid-column: 4 / 5;
+  grid-row: 2 / 3;
+}
+.card4:hover .card-grey-out, .card4:focus .card-grey-out {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.card4 .card-top {
+  background-image: url('images/5.jpg');
+  background-position: -2em 0;
+  background-size: cover;
+}
+
+.card4:hover polyline, .card4:focus polyline {
+  stroke-width: 15;
+}
+
+.card4:hover .card-bottom {
+  background: #ffffff;
+}
+
+/*CARD 5*/
+.card5 {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+}
+.card5:hover .card-grey-out, .card5:focus .card-grey-out {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.card5 .card-top {
+  background-image: url('images/6.jpg');
+  background-position: -1em 0;
+  background-size: cover;
+}
+
+.card5:hover polyline, .card5:focus polyline {
+  stroke-width: 15;
+}
+
+.card5:hover .card-bottom {
+  background: #ffffff;
+}
+
+/*CARD 6*/
+.card6 {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+}
+.card6:hover .card-grey-out, .card6:focus .card-grey-out {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.card6 .card-top {
+  background-image: url('images/2.jpg');
+  background-position: -1em 0;
+  background-size: cover;
+}
+
+.card6:hover polyline, .card6:focus polyline {
+  stroke-width: 15;
+}
+
+.card6:hover .card-bottom {
+  background: #ffffff;
+}
+
+/*CARD 7*/
+.card7 {
+  grid-column: 3 / 4;
+  grid-row: 3 / 4;
+}
+.card7:hover .card-grey-out, .card7:focus .card-grey-out {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.card7 .card-top {
+  background-image: url('images/8.jpg');
+  background-position: -.5em 0;
+  background-size: cover;
+}
+
+.card7:hover polyline, .card7:focus polyline {
+  stroke-width: 15;
+}
+
+.card7:hover .card-bottom {
+  background: #ffffff;
+}
+
+.views {
+  height: 100%;
+  text-align: center;
+}
+
+.card-bottom {
+  background: #eeeeee;
+  padding: .75em;
+  color: #2b2b2b;
+  transition: all 250ms ease-in-out;
+}
+
+.card-bottom h4, .card-bottom h3 {
+  color: #2b2b2b;
+}
+
+.card-bottom h6 {
+  margin-bottom: 1em;
+}
+
+.card-bottom h5 {
+  color: #27b5fe;
+}
+
+.link {
+  margin: 1.5em 0;
+  padding: .8em;
+  height: 6em;
+  word-break: break-all;
+  background-color: #cccccc;
+  border-radius: .3em;
+  overflow: hidden;
+  transition: all 250ms ease-in-out;
+}
+
+.link:hover {
+  cursor: pointer;
+  background-color: #2b2b2b;
+  color: #27b5fe;
+}
+
+@media (max-width: 1000px) {
+  body {
+    font-size: 1.3em;
+  }
+  main {
+    grid-template-columns: repeat(3, 33.333%);
+    grid-template-rows: repeat(3, auto);
+  }
+  .card1 {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+  .card2 {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+  .card3 {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+  }
+  .card4 {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
+  .card5 {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+  }
+  .card6 {
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+  }
+  .card7 {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+  }
+}
