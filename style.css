@@ -136,6 +136,7 @@ polyline {
 .card1 .card-top {
   background-image: url('images/1.jpg');
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
 }
 
@@ -159,6 +160,7 @@ polyline {
 .card2 .card-top {
   background-image: url('images/3.jpg');
   background-size: cover;
+  background-position: center;
 }
 
 .card2:hover polyline, .card2:focus polyline {
@@ -180,7 +182,8 @@ polyline {
 
 .card3 .card-top {
   background-image: url('images/4.jpg');
-  background-position: -2em 0;
+  /*background-position: -2em 0;*/
+  background-position: center;
   background-size: cover;
 }
 
@@ -203,7 +206,8 @@ polyline {
 
 .card4 .card-top {
   background-image: url('images/5.jpg');
-  background-position: -2em 0;
+  /*background-position: -2em 0;*/
+  background-position: center;
   background-size: cover;
 }
 
@@ -226,7 +230,8 @@ polyline {
 
 .card5 .card-top {
   background-image: url('images/6.jpg');
-  background-position: -1em 0;
+  /*background-position: -1em 0;*/
+  background-position: center;
   background-size: cover;
 }
 
@@ -249,7 +254,7 @@ polyline {
 
 .card6 .card-top {
   background-image: url('images/2.jpg');
-  background-position: -1em 0;
+  background-position: center;
   background-size: cover;
 }
 
@@ -272,7 +277,8 @@ polyline {
 
 .card7 .card-top {
   background-image: url('images/8.jpg');
-  background-position: -.5em 0;
+  /*background-position: -.5em 0;*/
+  background-position: center;
   background-size: cover;
 }
 
@@ -285,7 +291,7 @@ polyline {
 }
 
 .views {
-  height: 100%;
+  /*height: 100%;*/
   text-align: center;
 }
 
@@ -360,5 +366,76 @@ polyline {
   .card7 {
     grid-column: 1 / 2;
     grid-row: 4 / 5;
+  }
+}
+
+@media (max-width: 750px) {
+  header {
+    justify-content: center;
+  }
+  nav {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 1em;
+  }
+  main {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  article {
+    width: 100%;
+    display: flex;
+  }
+  .card-grey-out {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+  }
+  .card-top {
+    width: 50%;
+  }
+  .card-bottom {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .card-bottom-top {
+    order: 1;
+    width: 50%;
+  }
+  .card-bottom-bottom {
+    order: 2;
+    width: 50%;
+    text-align: right;
+  }
+  h4, h6 {
+    order: 3;
+    width: 100%;
+  }
+  .link {
+    width: 100%;
+    order: 4;
+    margin: 0;
+    height: 4em;
+  }
+}
+@media (max-width: 500px) {
+  body {
+    font-size: 1.3em;
+  }
+  svg {
+    display: none;
+  }
+  .card-top {
+    width: 30%;
+  }
+  .card-bottom {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .card-grey-out {
+    align-items: flex-end;
   }
 }
