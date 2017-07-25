@@ -2,11 +2,13 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Work Sans', sans-serif;
 }
 
 body {
   font-size: 1.5em;
   font-family: sans-serif;
+  background-color: #e4dccb;
 }
 
 header {
@@ -14,24 +16,32 @@ header {
   justify-content: space-between;
   flex-wrap: wrap;
   padding: .25em 2em 1.2em 1.5em;
-  background-color: #2b2b2b;
-  border-bottom: 3px solid #27b5fe;
+  background-color: #524656;
+  border-bottom: 3px solid #a6c4bc;
 }
 
 nav {
   display: flex;
   align-items: flex-end;
-  color: #747474;
+  color: #e4dccb;
 }
 
 nav span {
   margin-right: 1.5em;
   font-size: .8em;
   text-transform: uppercase;
+  display: flex;
+  align-items: center;
+}
+
+nav span:hover {
+  color: #ffffff;
+  cursor: pointer;
 }
 
 nav img {
-  width: 1em;
+  height: 1em;
+  margin-right: .35em;
 }
 
 main {
@@ -54,7 +64,7 @@ h1 {
 
 h3, h6 {
   font-size: .8em;
-  color: #2b2b2b;
+  color: #524656;
   font-weight: normal;
 }
 
@@ -73,16 +83,22 @@ h5 {
 
 p {
   font-size: .5em;
-  color: #747474;
+  color: #ea7a58;
 }
 article {
   box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
   border-radius: .3em;
   margin: .35em;
+  background: #eeeeee;
+  transition: all 250ms ease-in-out;
 }
 
 polyline {
   transition: all 250ms ease-in-out;
+}
+
+#hamburger-menu {
+  display: none;
 }
 
 .current-user {
@@ -93,11 +109,16 @@ polyline {
   text-align: right;
   margin-bottom: 1em;
   font-size: .65em;
-  color: #27b5fe;
+  color: #a6c4bc;
+}
+
+.current-user:hover {
+  cursor: pointer;
+  color: #e4dccb;
 }
 
 .current-user img {
-  width: 2em;
+  height: 1em;
   margin: .5em;
 }
 
@@ -136,6 +157,7 @@ polyline {
 .card1 .card-top {
   background-image: url('images/1.jpg');
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
 }
 
@@ -143,8 +165,9 @@ polyline {
   stroke-width: 15;
 }
 
-.card1:hover .card-bottom {
+.card1:hover {
   background: #ffffff;
+  cursor: pointer;
 }
 
 /*CARD 2*/
@@ -159,14 +182,16 @@ polyline {
 .card2 .card-top {
   background-image: url('images/3.jpg');
   background-size: cover;
+  background-position: center;
 }
 
 .card2:hover polyline, .card2:focus polyline {
   stroke-width: 15;
 }
 
-.card2:hover .card-bottom {
+.card2:hover {
   background: #ffffff;
+  cursor: pointer;
 }
 
 /*CARD 3*/
@@ -180,7 +205,8 @@ polyline {
 
 .card3 .card-top {
   background-image: url('images/4.jpg');
-  background-position: -2em 0;
+  /*background-position: -2em 0;*/
+  background-position: center;
   background-size: cover;
 }
 
@@ -188,8 +214,9 @@ polyline {
   stroke-width: 15;
 }
 
-.card3:hover .card-bottom {
+.card3:hover {
   background: #ffffff;
+  cursor: pointer;
 }
 
 /*CARD 4*/
@@ -203,7 +230,8 @@ polyline {
 
 .card4 .card-top {
   background-image: url('images/5.jpg');
-  background-position: -2em 0;
+  /*background-position: -2em 0;*/
+  background-position: center;
   background-size: cover;
 }
 
@@ -211,8 +239,9 @@ polyline {
   stroke-width: 15;
 }
 
-.card4:hover .card-bottom {
+.card4:hover {
   background: #ffffff;
+  cursor: pointer;
 }
 
 /*CARD 5*/
@@ -226,7 +255,8 @@ polyline {
 
 .card5 .card-top {
   background-image: url('images/6.jpg');
-  background-position: -1em 0;
+  /*background-position: -1em 0;*/
+  background-position: center;
   background-size: cover;
 }
 
@@ -234,8 +264,9 @@ polyline {
   stroke-width: 15;
 }
 
-.card5:hover .card-bottom {
+.card5:hover {
   background: #ffffff;
+  cursor: pointer;
 }
 
 /*CARD 6*/
@@ -249,7 +280,7 @@ polyline {
 
 .card6 .card-top {
   background-image: url('images/2.jpg');
-  background-position: -1em 0;
+  background-position: center;
   background-size: cover;
 }
 
@@ -257,8 +288,9 @@ polyline {
   stroke-width: 15;
 }
 
-.card6:hover .card-bottom {
+.card6:hover {
   background: #ffffff;
+  cursor: pointer;
 }
 
 /*CARD 7*/
@@ -272,7 +304,8 @@ polyline {
 
 .card7 .card-top {
   background-image: url('images/8.jpg');
-  background-position: -.5em 0;
+  /*background-position: -.5em 0;*/
+  background-position: center;
   background-size: cover;
 }
 
@@ -280,24 +313,25 @@ polyline {
   stroke-width: 15;
 }
 
-.card7:hover .card-bottom {
+.card7:hover {
   background: #ffffff;
+  cursor: pointer;
 }
 
 .views {
-  height: 100%;
+  /*height: 100%;*/
   text-align: center;
 }
 
 .card-bottom {
-  background: #eeeeee;
   padding: .75em;
-  color: #2b2b2b;
+  padding-bottom: 1em;
+  color: #524656;
   transition: all 250ms ease-in-out;
 }
 
 .card-bottom h4, .card-bottom h3 {
-  color: #2b2b2b;
+  color: #524656;
 }
 
 .card-bottom h6 {
@@ -305,15 +339,15 @@ polyline {
 }
 
 .card-bottom h5 {
-  color: #27b5fe;
+  color: #a6c4bc;
 }
 
 .link {
   margin: 1.5em 0;
   padding: .8em;
-  height: 6em;
   word-break: break-all;
-  background-color: #cccccc;
+  background-color: #a6c4bc;
+  color: #524656;
   border-radius: .3em;
   overflow: hidden;
   transition: all 250ms ease-in-out;
@@ -321,8 +355,8 @@ polyline {
 
 .link:hover {
   cursor: pointer;
-  background-color: #2b2b2b;
-  color: #27b5fe;
+  background-color: #524656;
+  color: #a6c4bc;
 }
 
 @media (max-width: 1000px) {
@@ -360,5 +394,95 @@ polyline {
   .card7 {
     grid-column: 1 / 2;
     grid-row: 4 / 5;
+  }
+}
+
+@media (max-width: 750px) {
+  header {
+    justify-content: center;
+  }
+  nav {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 1em;
+  }
+  main {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  article {
+    width: 100%;
+    display: flex;
+  }
+  nav {
+    display: none;
+  }
+  svg {
+    display: none;
+  }
+  #hamburger-menu {
+    display: inline;
+  }
+  .current-user {
+    justify-content: space-between;
+    font-size: 1em;
+  }
+  .full-screen {
+    display: none;
+  }
+  .logo {
+    margin-bottom: -2.2em;
+    text-align: right;
+  }
+  .card-grey-out {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+  }
+  .card-top {
+    width: 50%;
+  }
+  .card-bottom {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .card-bottom-top {
+    order: 1;
+    width: 50%;
+  }
+  .card-bottom-bottom {
+    order: 2;
+    width: 50%;
+    text-align: right;
+  }
+  h4, h6 {
+    order: 3;
+    width: 100%;
+  }
+  .link {
+    width: 100%;
+    order: 4;
+    margin: 0;
+  }
+  .card-bottom-top p {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  body {
+    font-size: 1.3em;
+  }
+  .card-top {
+    width: 30%;
+  }
+  .card-bottom {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .card-grey-out {
+    align-items: flex-end;
   }
 }
